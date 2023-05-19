@@ -1,6 +1,5 @@
 /*! General */
 .principal-header{
-  background-color: blue;
   height: 80px;
 }
 
@@ -10,6 +9,11 @@
 
 .main-navbar{
   width: 100px;
+}
+
+/*! Header */
+.small-logo{
+  height: 50px;
 }
 
 /*! Main */
