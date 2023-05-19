@@ -8,6 +8,9 @@ header{
   height: calc(100vh - 80px);
 }
 
+.main-navbar{
+  width: 100px;
+}
 
 /*TODO DEBUG */
 nav{
