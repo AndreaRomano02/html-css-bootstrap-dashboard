@@ -59,11 +59,18 @@ a{
   border-radius: 20px;
 }
 
-/*TODO DEBUG */
-main{
-  background-color: aqua;
+/*? Table Card */
+.code-icon{
+  font-size: 20px;
+  text-align: center;
+  line-height: 35px;
+  display: inline-block;
+  height: 35px;
+  width: 35px;
+  background-color: #F26551;
+  color: white;
+  border-radius: 50%;
 }
-
 
 /*! Responsive */
 /** Laptop */
