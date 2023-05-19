@@ -18,14 +18,22 @@
 <body>
 
   <!--! Header -->
-  <header class="principal-header container-fluid">
+  <header id="principal-header" class="container-fluid">
     <div class="row align-items-center h-100">
-      <div class="col-2">
-        <img class="img-fluid small-logo d-xl-none" src="img/mobile-logo.png" alt="logo">
-        <img class="img-fluid d-none d-xl-inline-block" src="img/logo.svg" alt="logo">
+      <div class="col-2 col-xl-1">
+        <img class="img-fluid logo d-xl-none" src="img/mobile-logo.png" alt="logo">
+        <img class="img-fluid logo big-logo d-none d-xl-inline-block" src="img/logo.svg" alt="logo">
       </div>
-      <div class="col-8">ciao</div>
-      <div class="col-2">ciao</div>
+      <div class="col-8 col-xl-10">
+        <form action="" method="get">
+          <input class="form-control" type="text" name="Search" id="Search"
+            placeholder="Prova a cercare: Lezioni di Laravel">
+        </form>
+      </div>
+      <div class="col-2 col-xl-1">
+        <div class="header-icons d-none d-xl-inline">ico ico ico</div>
+        <span class="bell">camp</span>
+      </div>
     </div>
   </header>
 

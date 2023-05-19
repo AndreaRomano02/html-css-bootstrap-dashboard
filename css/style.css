@@ -1,5 +1,11 @@
+.icon::before {
+  display: inline-block;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+}
+
 /*! General */
-.principal-header{
+#principal-header{
   height: 80px;
 }
 
@@ -12,8 +18,20 @@
 }
 
 /*! Header */
-.small-logo{
+.logo{
   height: 50px;
+}
+
+.big-logo{
+  max-width: 100px;
+}
+
+#principal-header .form-control{
+  background-color: lightgray;
+}
+
+#principal-header ::placeholder{
+  color: black;
 }
 
 /*! Main */
