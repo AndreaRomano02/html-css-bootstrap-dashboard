@@ -1,0 +1,19 @@
+/*! General */
+header{
+  background-color: blue;
+  height: 80px;
+}
+
+.main-layout{
+  height: calc(100vh - 80px);
+}
+
+
+/*TODO DEBUG */
+nav{
+  background-color: red;
+}
+
+main{
+  background-color: aqua;
+}
