@@ -1,7 +1,9 @@
-.icon::before {
-  display: inline-block;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
+:root{
+  .icon::before {
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+  }
 }
 
 /*! General */
@@ -13,8 +15,9 @@
   height: calc(100vh - 80px);
 }
 
-.main-navbar{
-  width: 100px;
+a{
+  color: currentColor;
+  text-decoration: none;
 }
 
 /*! Header */
@@ -34,6 +37,13 @@
   color: black;
 }
 
+/*! Main Navbar */
+.main-navbar{
+  width: 80px;
+  background-image: url(../img/sidebar-bg.png);
+  background-color: #051E34;
+}
+
 /*! Main */
 .main-header{
   height: 150px;
@@ -41,10 +51,6 @@
 }
 
 /*TODO DEBUG */
-nav{
-  background-color: red;
-}
-
 main{
   background-color: aqua;
 }
