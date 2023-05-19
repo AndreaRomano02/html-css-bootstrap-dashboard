@@ -1,5 +1,5 @@
 /*! General */
-header{
+.principal-header{
   background-color: blue;
   height: 80px;
 }
@@ -12,6 +12,12 @@ header{
   width: 100px;
 }
 
+/*! Main */
+.main-header{
+  height: 150px;
+  background-color: #1B72E8;
+}
+
 /*TODO DEBUG */
 nav{
   background-color: red;
@@ -19,4 +25,15 @@ nav{
 
 main{
   background-color: aqua;
+}
+
+
+/*! Responsive */
+/** Laptop */
+@media screen and (min-width: 1200px){
+  /*? Main Navbar */
+  .main-navbar{
+    width: 150px;
+  }
+  
 }
