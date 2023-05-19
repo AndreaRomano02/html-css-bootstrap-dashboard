@@ -25,11 +25,11 @@
   <header id="principal-header" class="container-fluid">
     <div class="row align-items-center h-100">
       <div class="col-2 col-xl-1">
-        <img class="img-fluid logo d-xl-none" src="img/mobile-logo.png" alt="logo">
-        <img class="img-fluid logo big-logo d-none d-xl-inline-block" src="img/logo.svg" alt="logo">
+        <a href="#"><img class="img-fluid logo d-xl-none" src="img/mobile-logo.png" alt="logo"></a>
+        <a href="#"><img class="img-fluid logo big-logo d-none d-xl-inline-block" src="img/logo.svg" alt="logo"></a>
       </div>
       <div class="col-8 col-xl-10">
-        <form action="" method="get">
+        <form action="http://marcolanci.it/lezioni/read_form.php" method="get">
           <input class="form-control" type="text" name="Search" id="Search"
             placeholder="Prova a cercare: Lezioni di Laravel">
         </form>
@@ -71,11 +71,36 @@
     <!--* Main -->
     <main class="h-100 overflow-auto flex-grow-1">
       <!--* Header Main -->
-      <header class="main-header container-fluid">
-        <div class="row row-cols-1 row-cols-md-3 h-100">
-          <div class="col order-md-1">ciao 1</div>
-          <div class="col">ciao 2</div>
-          <div class="col">ciao3</div>
+      <header id="main-header" class="container-fluid text-white">
+        <div class="row g-3 py-4">
+
+          <!--* First Col -->
+          <div class="col-12 col-md-2 order-md-1">
+            <span>Nuovo Studente</span>
+            <span><button type="button" class="btn btn-outline-light"><i class="fa-solid fa-plus"></i></button></span>
+          </div>
+
+          <!--* Second Col -->
+          <div class="col-12 col-md-6">
+            <div>
+              <h3 class="d-inline me-1">Boolean</h3>
+              <span class="badge bg-pill">Piano blaze</span>
+            </div>
+            <div class="mt-1">
+              <span class="badge bg-pill">Primary</span>
+              <i class="fa-solid fa-angles-right fa-xs"></i>
+              <span class="badge bg-pill rounded-circle pt-2 d-xl-none"><i class="fa-solid fa-plus"></i></span>
+              <span class="badge bg-pill d-none d-xl-inline-block">Boolean mobile app</span>
+              <span class="badge bg-pill d-none d-xl-inline-block">Boolean web app</span>
+              <span class="badge bg-pill d-none d-xl-inline-block">Boolean blog app</span>
+            </div>
+          </div>
+
+          <!--* Third Col -->
+          <div class="col-12 col-md-4">
+            <span class="fw-bold">Studenti online negli ultimi 30 minuti</span>
+            <div class="number-stundent fs-2">125</div>
+          </div>
         </div>
       </header>
 
