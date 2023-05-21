@@ -1,11 +1,3 @@
-/* :root{
-  .icon::before {
-    display: inline-block;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-  }
-} */
-
 /*! General */
 #principal-header{
   height: 80px;
