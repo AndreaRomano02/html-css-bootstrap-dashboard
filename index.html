@@ -42,15 +42,16 @@
         </div>
         <span class="bell">
           <div class="btn-group">
-          <button type="button" class="btn" data-bs-toggle="dropdown" aria-expanded="false">
-            <i class="fa-solid fa-bell text-warning"></i>
-          </button>
-          <ul class="dropdown-menu dropdown-menu-end">
-            <li><button class="dropdown-item" type="button">Action</button></li>
-            <li><button class="dropdown-item" type="button">Another action</button></li>
-            <li><button class="dropdown-item" type="button">Something else here</button></li>
-          </ul>
-        </div></span>
+            <button type="button" class="btn" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fa-solid fa-bell text-warning"></i>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li><button class="dropdown-item" type="button">Action</button></li>
+              <li><button class="dropdown-item" type="button">Another action</button></li>
+              <li><button class="dropdown-item" type="button">Something else here</button></li>
+            </ul>
+          </div>
+        </span>
       </div>
     </div>
   </header>
@@ -89,13 +90,17 @@
         <div class="row g-3 py-4">
 
           <!--* First Col -->
-          <div class="col-12 col-md-2 order-md-1">
+          <div class="col-12 col-md-4 text-md-end order-md-1">
             <span>Nuovo Studente</span>
-            <span><button type="button" class="btn btn-outline-light"><i class="fa-solid fa-plus"></i></button></span>
+            <span>
+              <button class="btn btn-outline-light ms-2" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><i
+                  class=" fa-solid fa-plus"></i></button>
+            </span>
           </div>
 
           <!--* Second Col -->
-          <div class="col-12 col-md-6">
+          <div class="col-12 col-md-4">
             <div>
               <h3 class="d-inline me-1">Boolean</h3>
               <span class="badge bg-pill">Piano blaze</span>
@@ -111,9 +116,93 @@
           </div>
 
           <!--* Third Col -->
-          <div class="col-12 col-md-4">
+          <div class="col-12 col-md-4 text-md-end">
             <span class="fw-bold">Studenti online negli ultimi 30 minuti</span>
             <div class="number-stundent fs-2">125</div>
+          </div>
+        </div>
+
+        <!--* Offcanvas -->
+        <div class="offcanvas offcanvas-end text-dark" tabindex="-1" id="offcanvasRight"
+          aria-labelledby="offcanvasRightLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasRightLabel">Inserisci un nuovo studente</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body fw-bold">
+
+            <!-- Form -->
+            <form action="http://marcolanci.it/lezioni/read_form.php" method="get" class="row g-3">
+              <div class="col-md-6">
+                <label for="firstname" class="form-label">Nome</label>
+                <input type="text" class="form-control" id="firstname" name="firstname">
+              </div>
+              <div class="col-md-6">
+                <label for="lastname" class="form-label">Cognome</label>
+                <input type="text" class="form-control" id="lastname" name="lastname">
+              </div>
+              <div class="col-md-6">
+                <label for="email" class="form-label">Email</label>
+                <div class="input-group flex-nowrap">
+                  <span class="input-group-text" id="addon-wrapping">@</span>
+                  <input type="text" class="form-control" id="email" aria-describedby="addon-wrapping" name="email">
+                </div>
+              </div>
+              <div class="col-md-6">
+                <label for="psw" class="form-label">Password</label>
+                <input type="password" class="form-control" id="psw" name="password">
+              </div>
+              <div class="col-md-6">
+                <label for="email" class="form-label">Indirizzo Email</label>
+                <div class="input-group flex-nowrap">
+                  <span class="input-group-text" id="addon-wrapping">@</span>
+                  <input type="text" class="form-control" id="email" aria-describedby="addon-wrapping" name="email">
+                </div>
+              </div>
+              <div class="col-md-6">
+                <label for="psw" class="form-label">Password</label>
+                <input type="password" class="form-control" id="psw" name="password">
+              </div>
+              <div class="col-md-12">
+                <label for="address" class="form-label">Indirizzo</label>
+                <input type="address" class="form-control" id="address" name="address">
+              </div>
+              <div class="col-md-6">
+                <label for="city" class="form-label">Citta</label>
+                <input type="address" class="form-control" id="city" name="city">
+              </div>
+              <div class="col-md-4">
+                <label for="inputState" class="form-label">Stato</label>
+                <select id="inputState" class="form-select" name="state">
+                  <option selected>Scegli...</option>
+                  <option>Ita</option>
+                  <option>Ing</option>
+                  <option>Spa</option>
+                </select>
+              </div>
+              <div class="col-md-2">
+                <label for="Cap" class="form-label">Cap</label>
+                <input type="text" class="form-control" id="Cap" name="cap">
+              </div>
+              <div class="col-12">
+                <div class="mb-3">
+                  <label for="immage-file" class="form-label">Foto</label>
+                  <input class="form-control" type="file" id="immage-file" accept="image/*" name="immages">
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="form-check fw-normal">
+                  <input class="form-check-input" type="checkbox" id="gridCheck" name="privacy">
+                  <label class="form-check-label" for="gridCheck">
+                    Seleziona per proseguire
+                  </label>
+                </div>
+              </div>
+              <div class="col-12">
+                <button type="submit" class="btn btn-primary">Salva</button>
+                <button type="reset" class="btn btn-warning text-dark">Svuota</button>
+              </div>
+            </form>
           </div>
         </div>
       </header>
@@ -132,17 +221,17 @@
               <div class="card mb-3">
                 <div class="card-header h2 pb-3">Prossime classi</div>
                 <div class="card-body">
-                  <table class="table table-hover">
+                  <table class="table table-hover text-center">
                     <thead>
                       <tr>
                         <!-- First -->
-                        <th scope="col" width="50%">Nome</th>
+                        <th scope="col" class="text-start" width="50%">Nome</th>
                         <!-- Second -->
                         <th scope="col" class="d-none d-md-table-cell">Data di inizio</th>
                         <!-- Third -->
                         <th scope="col" class="d-none d-md-table-cell">ROI</th>
                         <!-- Fourth -->
-                        <th scope="col" class="text-center">Stato</th>
+                        <th scope="col">Stato</th>
                         <!-- Fifht -->
                         <th scope="col">Azioni</th>
                       </tr>
@@ -150,7 +239,7 @@
                     <tbody>
                       <tr>
                         <!-- Firs -->
-                        <td>
+                        <td class="text-start">
                           <div class="code-icon"><i class="fa-solid fa-code"></i></div>
                           <div class="fw-semibold ms-2 d-inline-block">Classe 75</div>
                         </td>
@@ -159,7 +248,7 @@
                         <!-- Third -->
                         <td class="d-none d-md-table-cell">20%</td>
                         <!-- Fourth -->
-                        <td class="text-center"><span class="badge text-bg-success ">Done</span></td>
+                        <td><span class="badge text-bg-success ">Done</span></td>
                         <!-- Fifht -->
                         <td><button type="button" class="btn btn-outline-dark">
                             <i class="fa-solid fa-pencil"></i>
@@ -173,7 +262,7 @@
                       <!-- First Row -->
                       <tr>
                         <!-- First -->
-                        <td>
+                        <td class="text-start">
                           <div class="code-icon"><i class="fa-solid fa-code"></i></div>
                           <div class="fw-semibold ms-2 d-inline-block">Classe 76</div>
                         </td>
@@ -182,7 +271,7 @@
                         <!-- Third -->
                         <td class="d-none d-md-table-cell">20%</td>
                         <!-- Fourth -->
-                        <td class="text-center"><span class="badge text-bg-success ">Done</span></td>
+                        <td><span class="badge text-bg-success ">Done</span></td>
                         <!-- Fifht -->
                         <td><button type="button" class="btn btn-outline-dark">
                             <i class="fa-solid fa-pencil"></i>
@@ -196,7 +285,7 @@
                       <!-- Second Row -->
                       <tr>
                         <!-- First -->
-                        <td>
+                        <td class="text-start">
                           <div class="code-icon"><i class="fa-solid fa-code"></i></div>
                           <div class="fw-semibold ms-2 d-inline-block">Classe 77</div>
                         </td>
@@ -205,7 +294,7 @@
                         <!-- Third -->
                         <td class="d-none d-md-table-cell">20%</td>
                         <!-- Fourth -->
-                        <td class="text-center"><span class="badge text-bg-warning text-white ">Process</span></td>
+                        <td><span class="badge text-bg-warning text-white ">Process</span></td>
                         <!-- Fifht -->
                         <td><button type="button" class="btn btn-outline-dark">
                             <i class="fa-solid fa-pencil"></i>
@@ -219,7 +308,7 @@
                       <!-- Third Row -->
                       <tr>
                         <!-- First -->
-                        <td>
+                        <td class="text-start">
                           <div class="code-icon"><i class="fa-solid fa-code"></i></div>
                           <div class="fw-semibold ms-2 d-inline-block">Classe 78</div>
                         </td>
@@ -228,7 +317,7 @@
                         <!-- Third -->
                         <td class="d-none d-md-table-cell">20%</td>
                         <!-- Fourth -->
-                        <td class="text-center"><span class="badge text-bg-success ">Done</span></td>
+                        <td><span class="badge text-bg-success ">Done</span></td>
                         <!-- Fifht -->
                         <td><button type="button" class="btn btn-outline-dark">
                             <i class="fa-solid fa-pencil"></i>
@@ -242,7 +331,7 @@
                       <!-- Fourth Row -->
                       <tr>
                         <!-- First -->
-                        <td>
+                        <td class="text-start">
                           <div class="code-icon"><i class="fa-solid fa-code"></i></div>
                           <div class="fw-semibold ms-2 d-inline-block">Classe 79</div>
                         </td>
@@ -251,7 +340,7 @@
                         <!-- Third -->
                         <td class="d-none d-md-table-cell">20%</td>
                         <!-- Fourth -->
-                        <td class="text-center"><span class="badge text-bg-danger ">Failed</span></td>
+                        <td><span class="badge text-bg-danger ">Failed</span></td>
                         <!-- Fifht -->
                         <td><button type="button" class="btn btn-outline-dark">
                             <i class="fa-solid fa-pencil"></i>
@@ -265,7 +354,7 @@
                       <!-- Fifth Row -->
                       <tr>
                         <!-- First -->
-                        <td>
+                        <td class="text-start">
                           <div class="code-icon"><i class="fa-solid fa-code"></i></div>
                           <div class="fw-semibold ms-2 d-inline-block">Classe 80</div>
                         </td>
@@ -274,7 +363,7 @@
                         <!-- Third -->
                         <td class="d-none d-md-table-cell">20%</td>
                         <!-- Fourth -->
-                        <td class="text-center"><span class="badge text-bg-success ">Done</span></td>
+                        <td><span class="badge text-bg-success ">Done</span></td>
                         <!-- Fifht -->
                         <td>
                           <button type="button" class="btn btn-outline-dark">
@@ -289,7 +378,7 @@
                       <!-- Sixth Row -->
                       <tr>
                         <!-- First -->
-                        <td>
+                        <td class="text-start">
                           <div class="code-icon"><i class="fa-solid fa-code"></i></div>
                           <div class="fw-semibold ms-2 d-inline-block">Classe 81</div>
                         </td>
@@ -298,7 +387,7 @@
                         <!-- Third -->
                         <td class="d-none d-md-table-cell">20%</td>
                         <!-- Fourth -->
-                        <td class="text-center"><span class="badge text-bg-danger ">Failed</span></td>
+                        <td><span class="badge text-bg-danger ">Failed</span></td>
                         <!-- Fifht -->
                         <td><button type="button" class="btn btn-outline-dark">
                             <i class="fa-solid fa-pencil"></i>
@@ -312,7 +401,7 @@
                       <!-- Seventh Row -->
                       <tr>
                         <!-- First -->
-                        <td>
+                        <td class="text-start">
                           <div class="code-icon"><i class="fa-solid fa-code"></i></div>
                           <div class="fw-semibold ms-2 d-inline-block">Classe 82</div>
                         </td>
@@ -321,7 +410,7 @@
                         <!-- Third -->
                         <td class="d-none d-md-table-cell">20%</td>
                         <!-- Fourth -->
-                        <td class="text-center"><span class="badge text-bg-success ">Done</span></td>
+                        <td><span class="badge text-bg-success ">Done</span></td>
                         <!-- Fifht -->
                         <td><button type="button" class="btn btn-outline-dark">
                             <i class="fa-solid fa-pencil"></i>
@@ -346,32 +435,45 @@
                   <div class="accordion accordion-flush" id="accordionFlushExample">
                     <div class="accordion-item">
                       <h2 class="accordion-header" id="flush-headingOne">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
                           Come aggiungere un nuovo studente?
                         </button>
                       </h2>
-                      <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                        <div class="accordion-body">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste quas veritatis incidunt porro velit eligendi exercitationem aliquam ea laborum totam quasi voluptatem dignissimos deleniti corrupti sit iure unde, magnam deserunt.</div>
+                      <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste quas
+                          veritatis incidunt porro velit eligendi exercitationem aliquam ea laborum totam quasi
+                          voluptatem dignissimos deleniti corrupti sit iure unde, magnam deserunt.</div>
                       </div>
                     </div>
                     <div class="accordion-item">
                       <h2 class="accordion-header" id="flush-headingTwo">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
                           Come posso accedere alle informazioni del mio Account?
                         </button>
                       </h2>
-                      <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-                        <div class="accordion-body">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum illo a sint corporis veniam sed iste amet! Nihil odit culpa quas ducimus a ex libero rem, nulla molestias veniam autem!</div>
+                      <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum
+                          illo a sint corporis veniam sed iste amet! Nihil odit culpa quas ducimus a ex libero rem,
+                          nulla molestias veniam autem!</div>
                       </div>
                     </div>
                     <div class="accordion-item">
                       <h2 class="accordion-header" id="flush-headingThree">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#flush-collapseThree" aria-expanded="false"
+                          aria-controls="flush-collapseThree">
                           Posso usare quetsa Dashboard da mobile?
                         </button>
                       </h2>
-                      <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-                        <div class="accordion-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem eveniet exercitationem corrupti magnam possimus recusandae deserunt aperiam, porro nam blanditiis culpa, qui nihil esse maiores dicta repudiandae vel rerum! Molestiae?</div>
+                      <div id="flush-collapseThree" class="accordion-collapse collapse"
+                        aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem
+                          eveniet exercitationem corrupti magnam possimus recusandae deserunt aperiam, porro nam
+                          blanditiis culpa, qui nihil esse maiores dicta repudiandae vel rerum! Molestiae?</div>
                       </div>
                     </div>
                   </div>

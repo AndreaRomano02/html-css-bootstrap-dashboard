@@ -51,6 +51,10 @@
   border-radius: 20px;
 }
 
+#main-header .offcanvas{
+  width: 100%;
+}
+
 /*? Table Card */
 .code-icon{
   font-size: 20px;
@@ -70,6 +74,10 @@
   /*? Main Navbar */
   .main-navbar{
     width: 150px;
+  }
+
+  #main-header .offcanvas{
+    width: 50%;
   }
   
 }
