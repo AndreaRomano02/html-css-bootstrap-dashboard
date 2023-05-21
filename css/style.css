@@ -40,6 +40,13 @@
   background-color: #051E34;
 }
 
+.main-navbar a:hover{
+  background-color: rgba(255, 255, 255, 0.5);
+  color: white;
+  padding: 12px 12px;
+  transition: background-color 500ms;
+}
+
 /*! Main */
 #main-header{
   /* height: 150px; */
